@@ -1,0 +1,8 @@
+" Micrograd "
+is a tiny autograd(Automatic Gradient) engine and neural network library developed by Andrej Karpathy. It's designed to help      people understand how automatic differentiation works under the hood. The library implements backpropagation from scratch in Python and is used for small-scale deep learning experiments.
+
+Key Features of Micrograd:
+1) Automatic Differentiation: Implements a computation graph for tracking operations and calculating gradients.
+2) Scalar-based Computation: Works with individual numbers instead of tensors, making it simple and easy to follow.
+3) Backpropagation: Uses reverse-mode autodiff to compute gradients efficiently.
+4) Minimalistic Neural Networks: Provides basic classes for building and training neural networks.
