@@ -2,3 +2,33 @@
 
 learnt about Infix to postfix conversion
 
+def precedence(op):
+    if op == '^':
+        return 3
+    elif op == '*' or op == '/':
+        return 2
+    elif op == '+' or op == '-':
+        return 1
+    else:
+        return 0
+
+def infix_postfix(exp):
+    statck = []
+    ans = ""
+    for ch in exp:
+        if ch.isalnum():
+            ans += ch
+        elif ch == '(':
+            statck.append(ch)
+        elif ch == ')':
+            while statck and statck[-1]!='(':
+                ans += statck.pop()
+            statck.pop()
+        else:
+            while statck and precedence(statck[-1]) > precedence(ch):
+                ans += statck.pop()
+            statck.append(ch)
+    while statck:
+        ans += statck.pop()
+    return ans
+print(infix_postfix("a+b"))
