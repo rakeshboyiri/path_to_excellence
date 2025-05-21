@@ -31,4 +31,4 @@ def infix_postfix(exp):
     while statck:
         ans += statck.pop()
     return ans
-print(infix_postfix("a+b"))
+print(infix_postfix("a+b*(c^d-e)^(f+g*h)-i"))
